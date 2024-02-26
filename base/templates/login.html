@@ -1,0 +1,20 @@
+{% extends "bass.html" %}
+{%block content%}
+    {% comment %} ----navbar----------- {% endcomment %}
+   
+    {% comment %} ---- navbar end----- {% endcomment %}
+      <div class="container pt-3">
+        <div class=" login-box col-lg-4 mx-auto mt-3 shadow p-0 bg-light rounded animated fadeIn">
+            <div class="login-box-heading">
+                <h5>Login Here</h5></div>
+             <div class="p-4">
+                 <form action="/login/" method="post">
+                    {% csrf_token%}
+                     {{ form.as_p }}
+                     <hr>
+                     <input class="btn btn-info animate__animated animate__fadeIn" type="submit" value="Login">
+                  </form>
+             </div>
+          </div>
+    </div>
+{% endblock %}

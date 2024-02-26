@@ -1,0 +1,20 @@
+{% extends "bass.html" %}
+{%block content%}
+ 
+  
+    {% comment %} ---- navbar end----- {% endcomment %}
+   
+    <div class="col-lg-7 mx-auto mt-3">
+        <div class="col-lg-9 shadow p-2 mx-auto bg-light rounded animated fadeIn">
+            <div class="alert alert-success">SignUp</div>
+             <div class="p-4">
+                 <form action="/signup/" method="post">
+                    {% csrf_token%}
+                     {{ form.as_p }}
+                     <hr>
+                     <input class="btn btn-success animate__animated animate__fadeIn" type="submit" value="Create Account">
+                  </form>
+             </div>
+          </div>
+    </div>
+{% endblock %}
